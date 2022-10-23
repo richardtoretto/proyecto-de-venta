@@ -1,27 +1,29 @@
-# FrontendVenta
+#BACKEND_VENTA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+1.	Cargar el script Database.sql en servidor SQL SERVER, para la creación de tablas y el inserte de registros de productos.
 
-## Development server
+2.	Cambiar la ruta de la nueva conexión de SQL SERVER en el Web.config
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+       <connectionStrings>
+    
+        <add name="connection" connectionString=
+        "server=DESKTOP-VFKS56N;
+         database=prueba;
+         uid=sa;
+         password=root;
+         "/>  
+         
+      </connectionStrings>
+    
+3. iniciar servicio de backend con el archivo backend_venta.sln, tener instalado el programa de visual studio 2017 o mayor. 
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+#FRONTEND 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1.	Si la ruta del servidor del backend http://localhost:61959/ cambia, cambiar la ruta archivo del global.ts en el frontend, que se encuentra en la ruta:(          src\app\service\global.ts ).
 
-## Running unit tests
+2.	Para Iniciar server del proyecto de angular, abrir consola CMD ruta del proyecto>ng serve.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3.  iniciar en el navegador con http://localhost:4200/
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
