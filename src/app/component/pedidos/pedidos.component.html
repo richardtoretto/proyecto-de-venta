@@ -1,0 +1,151 @@
+<div class="container">
+
+    <br>
+    <h2>Información del cliente</h2>
+    <br>
+
+    <div class="row">
+      <div class="card-body col-4">       
+        <hr class="border border-primary">
+
+          <div class="form-group mb-3">
+            <label for="usuario" class="form-label">Documento de identidad</label>
+            <input type="text" class="form-control" name="usuario" value={{usuario}} disabled>                    
+          </div>
+    
+          <div class="form-group mb-3">
+            <label for="direccion" class="form-label">Direccion de envio</label>
+            <input type="text" class="form-control" name="direccion" value= {{direccion}} disabled>
+          </div>
+ 
+          <br>
+          <hr class="border border-primary">
+         
+      </div>
+
+
+
+      <div class="col-md-5">
+      </div>
+       <div class="card col-md-3 card text-bg-light">
+          <br>
+          <h4 class="text-center">RESUME DEL PEDIDO</h4>
+          <br>
+
+       <div class="row">   
+
+          <hr>
+        
+          <div class="col-6">
+          <a><h6>Subtotal ({{cant_productos}})</h6></a> 
+          </div>
+          <div class="col-1">
+          </div>
+          <div class="col-5">
+
+            <span *ngIf="subtotal">
+              <a><h6>{{subtotal | currency: 'USD' :'symbol':'3.0' | lowercase}}</h6></a> 
+            </span>
+
+            <span *ngIf="!subtotal">
+              <a><h6>$0</h6></a> 
+            </span>
+          
+          </div>
+          
+         <p></p>
+        <hr>
+          <div class="col-6">
+            <a><h6>Impuesto de iva</h6></a> 
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-5">
+            <a><h6>$0</h6></a> 
+          </div>
+         
+          <p></p>
+          <hr>
+          <br>
+
+          <div class="col-6">
+           <a><h5>Total</h5></a>  
+           </div>
+           <div class="col-1">
+           </div>
+           <div class="col-5">
+          
+          <span *ngIf="total">
+           <a><h5>{{total | currency: 'USD' :'symbol':'3.0' | lowercase}}</h5></a> 
+          </span>
+
+          <span *ngIf="!total">
+            <a><h5>$0</h5></a> 
+           </span>
+          
+        </div>
+                      
+         </div> 
+        </div>
+      </div>   
+      
+
+
+    <br>
+
+
+
+<div class="table_scroll">
+    <table class=" table table-bordered table-striped" >
+        <thead class=" bg-primary text-white text-center">
+        <tr>
+             
+      
+            <th>Id Producto</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Total</th>
+            <th>Opciones</th>
+         
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        <tr *ngFor="let item of lista_pedidos" >  
+                   
+          
+            <td>{{ item.id_producto}}</td>
+            <td>{{ item.producto}}</td>
+            <td>{{ item.cantidad}}</td>
+            <td>{{ item.precio | currency: 'USD' :'symbol':'3.0' | lowercase}}</td>
+            <td>{{ item.total | currency: 'USD' :'symbol':'3.0' | lowercase}}</td>
+            <td> 
+
+                
+              
+              <div class="row">
+
+                <div class="col-5">    
+                <select #cant class="form-select" (change)="select_cantidad(item,cant)">
+                  <option>Agregar</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                </select>
+                 </div>
+
+                 <div class="col-auto">     
+                <a (click)="Delete(item.id)" class="btn btn-danger ">Eliminar</a>
+                 </div>
+               
+              </div>              
+              </td>                
+        </tr>
+        </tbody> 
+    </table >   
+<div>
+

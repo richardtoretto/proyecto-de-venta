@@ -1,0 +1,72 @@
+<br>
+
+<div class="container-md">
+
+  <hr>
+  <h3 class="text-primary text-center">Nuestros Productos Electrimax</h3>
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+     
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="assets\carusel\nevera_mabe.jpg" class="d-block w-100" width="auto" height="500px" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h4>MABE</h4>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="assets\carusel\tv_lg.jpg" class="d-block w-100" width="auto" height="500px" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4>TV LG</h4>
+          <p></p>
+        </div>
+     
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+<hr>
+
+
+<h3 class="text-success">Electrodomesticos</h3>
+
+
+<div class="row">
+       
+  <div class="col-md-3 css_resaltar" *ngFor= "let prods of lista">
+    <br>
+   <div class="card">
+    <br>
+    <img src={{url}}{{prods.imagen}} class="card-img-top" alt="" width="auto" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">{{prods.producto}}</h5>
+      <h5 class="card-title" >{{prods.precio | currency: 'USD' :'symbol':'3.0' | lowercase }}</h5>
+      <p class="card-text"></p>
+          
+        <a class="btn btn-primary" (click)="agregar_pedido(prods)">Agregar</a>
+    
+
+      </div>
+       
+    </div>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>

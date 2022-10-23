@@ -1,0 +1,1 @@
+export var global={url:'http://localhost:61959/'};
