@@ -19,6 +19,9 @@
 
 
 
+
+
+
 #FRONTEND 
 
 1.	Si la ruta del servidor del backend http://localhost:61959/ cambia, cambiar la ruta archivo del global.ts en el frontend, que se encuentra en la ruta:(          src\app\service\global.ts ).
