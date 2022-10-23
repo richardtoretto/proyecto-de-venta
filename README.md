@@ -14,7 +14,7 @@
          "/>  
          
       </connectionStrings>
-    
+      
 3. iniciar servicio de backend con el archivo backend_venta.sln, tener instalado el programa de visual studio 2017 o mayor. 
 
 
@@ -24,9 +24,11 @@
 
 #FRONTEND 
 
-1.	Si la ruta del servidor del backend http://localhost:61959/ cambia, cambiar la ruta archivo del global.ts en el frontend, que se encuentra en la ruta:(          src\app\service\global.ts ).
+1.Frontend son todos los archivo, menos la carpeta que se llama backend.
 
-2.	Para Iniciar server del proyecto de angular, abrir consola CMD ruta del proyecto>ng serve.
+2. Si la ruta del servidor del backend http://localhost:61959/ cambia, cambiar la ruta archivo del global.ts en el frontend, que se encuentra en la ruta:(          src\app\service\global.ts ).
 
-3.  iniciar en el navegador con http://localhost:4200/
+3.	Para Iniciar server del proyecto de angular, abrir consola CMD ruta del proyecto>ng serve.
+
+4.  iniciar en el navegador con http://localhost:4200/
 
