@@ -1,6 +1,6 @@
 #BACKEND_VENTA
 
-1.	Cargar el script Database.sql en servidor SQL SERVER, para la creación de tablas y el inserte de registros de productos.
+1.	en la carpeta backend_venta se encuentra el script Database.sql, para la creación de tablas y el inserte de registros de productos en servidor SQL SERVER.
 
 2.	Cambiar la ruta de la nueva conexión de SQL SERVER en el Web.config
 
