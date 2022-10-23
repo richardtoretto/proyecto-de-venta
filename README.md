@@ -11,10 +11,8 @@
          database=prueba;
          uid=sa;
          password=root;
-         "/>  
-         
-      </connectionStrings>
-      
+         "/>        
+      </connectionStrings>     
 3. iniciar servicio de backend con el archivo backend_venta.sln, tener instalado el programa de visual studio 2017 o mayor. 
 
 
