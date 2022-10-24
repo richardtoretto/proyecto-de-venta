@@ -1,4 +1,4 @@
-#BACKEND_VENTA
+#BACKEND_VENTA CSHARP
 
 1.	en la carpeta backend_venta se encuentra el script Database.sql, para la creación de tablas y el inserte de registros de productos en servidor SQL SERVER.
 
@@ -13,18 +13,18 @@
          password=root;
          "/>        
       </connectionStrings>     
-3. iniciar servicio de backend con el archivo backend_venta.sln, tener instalado el programa de visual studio 2017 o mayor. 
+3. iniciar servicio de backend con el archivo backend_venta.sln, tener instalado el programa de visual studio C# 2017 o mayor. 
 
 
 
 
 
 
-#FRONTEND 
+#FRONTEND ANGULAR
 
-1.Frontend son todos los archivo, menos la carpeta que se llama backend.
+1.Frontend son todos los archivos, menos la carpeta que se llama backend.
 
-2. Si la ruta del servidor del backend http://localhost:61959/ cambia, cambiar la ruta archivo del global.ts en el frontend, que se encuentra en la ruta:(          src\app\service\global.ts ).
+2. Si la ruta del servidor del backend http://localhost:61959/ cambia, cambiar la ruta en el archivo del global.ts en el frontend, que se encuentra en la ruta:(          src\app\service\global.ts ).
 
 3.	Para Iniciar server del proyecto de angular, abrir consola CMD ruta del proyecto>ng serve.
 
